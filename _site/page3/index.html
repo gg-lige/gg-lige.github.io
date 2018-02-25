@@ -22,7 +22,7 @@
     <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="http://localhost:4000/">
+    <link rel="canonical" href="http://localhost:4000/page3/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -183,193 +183,20 @@
             ">
     			
 <div class="post-preview">
-    <a href="/2018/02/25/%E9%AB%98%E7%BA%A7%E7%AE%97%E6%B3%95/">
+    <a href="/2018/02/25/%E5%9B%BE/">
         <h2 class="post-title">
-            高级算法
+            图
         </h2>
         
         <div class="post-content-preview">
-            高级算法
-1.包含四种算法：==数值概率算法==（数值问题的求解，最优化问题的近似解）、==蒙特罗卡Monte Carlo算法==（判定问题的准确解，不一定正确）、==拉斯维加斯Las Vegas算法==（不一定会得到解，但得到的解一定是正确解）、==舍伍德Sherwood算法==（总能求得一个解，且一定是正确解，主要作用是减少或是消除好的和坏的实例之间的差别）
-
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by GG Blog on February 25, 2018
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2018/02/25/%E9%98%9F%E5%88%97/">
-        <h2 class="post-title">
-            队列
-        </h2>
-        
-        <div class="post-content-preview">
-            队列
+            图
 
   
-    假设==循环队列==的队尾指针是rear，队头是front，其中QueueSize为循环队列的最大长度。
-(1) 入队时队尾指针前进1：(rear+1)%QueueSize
-(2) 出队时队头指针前进1：(front+1)%QueueSize
-(3) 队列长度：(rear-front+QueueSize)%QueueSize
-(4) 队满条件为：(rear+1)%Que...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by GG Blog on February 25, 2018
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2018/02/25/%E9%93%BE%E8%A1%A8/">
-        <h2 class="post-title">
-            链表
-        </h2>
-        
-        <div class="post-content-preview">
-            链表
-
-  二分查找又称折半查找，优点是比较次数少，查找速度快，平均性能好；其缺点是要求==待查表为有序表、顺序存储结构==，且插入删除困难。
-  线性表中利用==带头结点的双循环链表==存储方式最省时间。
-  线性表的顺序存储结构是一种==随机存取、顺序存储==的存储结构。顺序存储指内存地址是一块的，随机存取指访问时可以按下标随机访问。
-  线性表有两种存储结构：
-1.==顺序存储结构—顺...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by GG Blog on February 25, 2018
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2018/02/25/%E9%80%92%E5%BD%92/">
-        <h2 class="post-title">
-            递归
-        </h2>
-        
-        <div class="post-content-preview">
-            递归
-
-  递归的过程，利用==栈==保存现场地址，然后将数据入栈，运算，后出栈，返回结果。递归工作栈里面包括==返回地址、本层的局部变量和递归调用的形参代换用实参==，所以正常情况下，无论递归过程有没有使用局部变量，转换为非递归过++程都需要用栈++来模拟这个递归调用过程
-  ==fork()给子进程返回一个零值，而给父进程返回一个非零值；==
-在main这个主进程中，首先执行 fork(...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by GG Blog on February 25, 2018
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2018/02/25/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/">
-        <h2 class="post-title">
-            软件工程
-        </h2>
-        
-        <div class="post-content-preview">
-            软件工程
-
-  从==总体到具体==的关联关系排列应该是软件工程、软件过程、软件产品、软件项目。
-  六种覆盖方法中==覆盖准则由弱到强==依次是++语句覆盖、判定覆盖（分支覆盖）、条件覆盖、判定/条件覆盖、条件组合覆盖、路径覆盖++。
-其中，
-语句覆盖是使得程序中每个语句至少被执行一次；
-判定覆盖是使得程序中的每个分支至少都通过一次；
-条件覆盖是使得判定中的每个条件获得各种可能的结果；
-判...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by GG Blog on February 25, 2018
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2018/02/25/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/">
-        <h2 class="post-title">
-            网络基础
-        </h2>
-        
-        <div class="post-content-preview">
-            网络基础
-
-  ICMP的差错报告都是==网关—源机==模式的：一旦发生错误，差错情况报告信源机.
-差错报文包括 ：目标不可到达（网络、协议、主机、端口不可到达；禁止分割、目标网络不认识、目标主机不认识等等）、超时、参数问题、重定向（网络重定向、主机重定向等）
-  IP报头中的==生存期（TTL）属性==，用来控制报文段在网络中的生存期。 当TTL值为0时，路由器判断数据包超时，发送ICMP...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by GG Blog on February 25, 2018
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2018/02/25/%E7%BC%96%E8%AF%91%E5%92%8C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/">
-        <h2 class="post-title">
-            编译和体系结构
-        </h2>
-        
-        <div class="post-content-preview">
-            编译和体系结构
-
-  十进制数加调整指令==DAA==(Decimal Adjust After Addition)该指令是用于调整AL的值,该值是由指令ADD或ADC运算二个压缩型BCD码所得到的结果.
-  ==指令指针寄存器==是IP，PSW即==程序状态字==。
-  ==微波==标签工作频率是 2.45GHz 。
-
-
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by GG Blog on February 25, 2018
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2018/02/25/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/">
-        <h2 class="post-title">
-            编程基础
-        </h2>
-        
-        <div class="post-content-preview">
-            编程基础
-
-  在程序中存放指令地址的寄存器叫==程序计数器==。
-  永久删除-》==Shift+Del==。
-  虚拟内存指的是==用硬盘中的一部分存储空间当作内存==。
-
-
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by GG Blog on February 25, 2018
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2018/02/25/%E6%A0%91/">
-        <h2 class="post-title">
-            树
-        </h2>
-        
-        <div class="post-content-preview">
-            树
-
-  m阶B-树的所有叶子都在==同一==层次上。
-  最优二叉树：哈夫曼树。
+    图的==深==度优先遍历相当于树的==前序==遍历。
   
-    Kruskal算法是==按权值选边==，若选边后不形成回路,则保留作为一条边,若形成回路则除去。
-Prim算法是每次==从当前的二叉树节点向外延伸==的，选择权值最小的边。
-  
-  分支节点是度不为0的节点。设树高h,因为是满二叉树，所以叶子节点有2^(h-1)个。
-有n(n&gt;0)个分支...
+  强连通分量是==有向图==的极大强连通子图。连通分量指的是==无向图==中的极大连通子图。
+  一个有向图能被拓扑排序的充要条件就是它是一个==有向无环图==。
+  一个事件==的最早开始时间==和以该事件为尾的弧的活动最早开始时间相同。一个事件的==最迟开始时间==为以该事件为尾的弧的活动最迟开始时间与该活...
         </div>
     </a>
     <p class="post-meta">
@@ -379,22 +206,119 @@ Prim算法是每次==从当前的二叉树节点向外延伸==的，选择权值
 <hr>
 
 <div class="post-preview">
-    <a href="/2018/02/25/%E6%A0%88/">
+    <a href="/2018/02/25/%E5%93%88%E5%B8%8C/">
         <h2 class="post-title">
-            栈
+            哈希
         </h2>
         
         <div class="post-content-preview">
-            栈
+            哈希
 
-  出栈不同排列顺序：卡特兰数公式 h(n)=C(2n[下]，n[上])/(n+1)，适用于出栈情况求和
-==C(2n,n)-C(2n,n+1)==
-  通常元素==进栈==的操作是先移动栈顶指针，再存入元素；元素==出栈==的操作是先取出元素，再移动栈顶指针。栈的顺序存储空间为S(1:50)，初始状态top=51，所以这个栈是50在栈底，1是==开口向上==的。
-  存储结构是数据的...
+  
+    常见==哈希冲突解决办法==：
+a.开放地址法【将所有结点均放在散列表[0….m-1]中】，包括线性探测法、线性补偿探测法、随机探测法 b.链地址法（拉链法）c.二次探测法 d.伪随机探测法  e.再散列（双重散列，多重散列）f.建立一个公共溢出区.
+  
+  常见的==散列函数==有：直接定址法，数字分析法，平法取中法，取余法，折叠法，随机法.
+  单旋转法是==建立...
         </div>
     </a>
     <p class="post-meta">
         Posted by GG Blog on February 25, 2018
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2018/02/25/%E5%8A%A0%E5%AF%86%E4%B8%8E%E5%AE%89%E5%85%A8/">
+        <h2 class="post-title">
+            加密与安全
+        </h2>
+        
+        <div class="post-content-preview">
+            加密与安全
+
+  计算机病毒主要通过==移动存储介质==（如 U盘、移动硬盘）和==计算机网==络两大途径进行传播。
+  ==摆渡木马==是一种特殊的木马，其感染机制与 U 盘病毒的传播机制完全一样，只是感染目标计算机后，它会++尽量隐蔽自己的踪迹++，不会出现普通 U 盘病毒感染后的症状，如更改盘符图标、破坏系统数据、在弹出菜单中添加选项等，它唯一的动作就是++扫描系统中的文件数据，利用关...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by GG Blog on February 25, 2018
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2018/02/25/Linux/">
+        <h2 class="post-title">
+            Linux
+        </h2>
+        
+        <div class="post-content-preview">
+            Linux
+
+  （1）软连接可以跨文件系统，硬连接不可以
+（2）硬连接不管有多少个，都指向的是同一个I节点，会把结点连接数增加，只要结点的连接数不是0，文件就一直存在不管你删除的是源文件还是连接的文件。只要有一个存在文件就存在。 当你修改源文件或者连接文件任何一个的时候，其他的文件都会做同步的修改。软链接不直接使用i节点号作为文件指针, 而是使用文件路径名作为指针。所以删除连接文件对源文件...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by GG Blog on February 25, 2018
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2018/02/25/Java/">
+        <h2 class="post-title">
+            Java
+        </h2>
+        
+        <div class="post-content-preview">
+            Java
+
+  
+    普通的类方法是可以和类名同名的，和构造方法唯一的区分就是，构造方法没有返回值.
+  
+  大多数 JVM 将内存区域划分为 Method Area（Non-Heap）（方法区） ,Heap（堆） , Program Counter Register（程序计数器） ,   VM Stack（虚拟机栈，也有翻译成JAVA 方法栈的）,Native Method Stac...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by GG Blog on February 25, 2018
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2018/02/24/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+        <h2 class="post-title">
+            快速搭建个人博客
+        </h2>
+        
+        <h3 class="post-subtitle">
+            手把手教你在半小时内搭建自己的个人博客(如果不踩坑的话🙈🙊🙉)
+        </h3>
+        
+        <div class="post-content-preview">
+            
+  正所谓前人栽树，后人乘凉。
+
+  感谢Huxpro提供的博客模板和BY Blog提供的博客搭建方法。
+
+  我的的博客
+
+
+前言
+从 Jekyll 到 GitHub Pages 按照BY的搭建过程进行，终于把我的个人博客GG Blog搭建出来了。
+以下为BY博客内容。
+
+快速开始
+
+从注册一个Github账号开始
+
+我采用的搭建博客的方式是使用 GitHub Pages + jekyl...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by GG on February 24, 2018
     </p>
 </div>
 <hr>
@@ -404,10 +328,10 @@ Prim算法是每次==从当前的二叉树节点向外延伸==的，选择权值
 
 <ul class="pager">
     
-    
-    <li class="next">
-        <a href="/page2">Older Posts &rarr;</a>
+    <li class="previous">
+        <a href="/page2">&larr; Newer Posts</a>
     </li>
+    
     
 </ul>
 

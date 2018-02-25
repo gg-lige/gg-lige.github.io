@@ -1,0 +1,13 @@
+<h1 id="队列">队列</h1>
+<ol>
+  <li>
+    <p>假设==循环队列==的队尾指针是rear，队头是front，其中QueueSize为循环队列的最大长度。<br />
+(1) 入队时队尾指针前进1：(rear+1)%QueueSize<br />
+(2) 出队时队头指针前进1：(front+1)%QueueSize<br />
+(3) 队列长度：(rear-front+QueueSize)%QueueSize<br />
+(4) 队满条件为：(rear+1)%QueueSize==front<br />
+(5) 队空条件为：front == rear</p>
+  </li>
+  <li>普通队列: 满队列的条件QU-&gt;rear － QU-&gt;front = = m0</li>
+  <li>在链队列中,即使不设置尾指针也能进行入队操作:遍历整个队列，当一个元素的next为null时，则此元素为最后一个，在其后面添加新的元素。</li>
+</ol>

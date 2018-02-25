@@ -1,0 +1,49 @@
+<h1 id="java">Java</h1>
+<ol>
+  <li>
+    <p>普通的类方法是可以和类名同名的，和构造方法唯一的区分就是，构造方法没有返回值.</p>
+  </li>
+  <li>大多数 JVM 将内存区域划分为 Method Area（Non-Heap）（方法区） ,Heap（堆） , Program Counter Register（程序计数器） ,   VM Stack（虚拟机栈，也有翻译成JAVA 方法栈的）,Native Method Stack  （ 本地方法栈 ），其中Method Area 和  Heap 是线程共享的  ，VM Stack，Native Method Stack  和Program Counter Register  是非线程共享的。为什么分为 线程共享和非线程共享的呢?请继续往下看。
+首先我们熟悉一下一个一般性的 Java 程序的工作过程。一个 Java 源程序文件，会被编译为字节码文件（以 class 为扩展名），每个java程序都需要运行在自己的JVM上，然后告知 JVM 程序的运行入口，再被 JVM 通过字节码解释器加载运行。那么程序开始运行后，都是如何涉及到各内存区域的呢？
+概括地说来，JVM初始运行的时候都会分配好 Method Area（方法区） 和Heap（堆） ，而JVM 每遇到一个线程，就为其分配一个 Program Counter Register（程序计数器） ,   VM Stack（虚拟机栈）和Native Method Stack  （本地方法栈）， 当线程终止时，三者（虚拟机栈，本地方法栈和程序计数器）所占用的内存空间也会被释放掉。这也是为什么我把内存区域分为线程共享和非线程共享的原因，非线程共享的那三个区域的生命周期与所属线程相同，而线程共享的区域与JAVA程序运行的生命周期相同，所以这也是系统垃圾回收的场所只发生在线程共享的区域（实际上对大部分虚拟机来说知发生在Heap上）的原因。</li>
+  <li>ConcurrentHashMap 使用==segment来==分段和管理锁，segment继承自ReentrantLock，因此ConcurrentHashMap使用ReentrantLock来==保证线程安全==。</li>
+  <li>Arrays.asList()，其将一个数组转化为一个List对象，这个方法会返回一个ArrayList类型的对象， 这个ArrayList类并非java.util.ArrayList类，而是Arrays类的内部类.</li>
+  <li>ThreadLocal类为每一个线程都维护了自己独有的变量拷贝。每个线程都拥有了自己独立的一个变量。所以ThreadLocal重要作用并不在于多线程间的数据共享，而是==数据的独立==.</li>
+  <li>当编写一个java源代码文件时，此文件通常被称为编译单元（有时也被称为转译单元）。每个编译单元都必须有一个后缀名.java，==而在编译单元内则可以有一个public类，该类的名称必须与文件的名称相同（包括大小写，但不包括文件的后缀名.java）。每个编译单元只能有一个public类，否则编译器就不会接受。==</li>
+  <li>JSP 四大作用域： ==page(作用范围最小)、request、session、application（作用范围最大）==。<br />
+a.存储在application对象中的属性可以被同一个WEB应用程序中的所有Servlet和JSP页面访问。（属性作用范围最大）<br />
+b.存储在session对象中的属性可以被属于同一个会话（浏览器打开直到关闭称为一次会话，且在此期间会话不失效）的所有Servlet和JSP页面访问。<br />
+c.存储在request对象中的属性可以被属于同一个请求的所有Servlet和JSP页面访问（在有转发的情况下可以跨页面获取属性值），例如使用PageContext.forward和PageContext.include方法连接起来的多个Servlet和JSP页面。<br />
+d.存储在pageContext对象中的属性仅可以被当前JSP页面的当前响应过程中调用的各个组件访问，例如，正在响应当前请求的JSP页面和它调用的各个自定义标签类。</li>
+  <li>当程序执行到try{}语句中的return方法时，它会干这么一件事，将要返回的结果存储到一个临时栈中，然后程序不会立即返回，而是去执行finally{}中的程序， 在执行<code class="highlighter-rouge">a = 2</code>时，程序仅仅是覆盖了a的值，但不会去更新临时栈中的那个要返回的值 。执行完之后，就会通知主程序“finally的程序执行完毕，可以请求返回了”，这时，就会将临时栈中的值取出来返回。这下应该清楚了，==要返回的值是保存至临时栈中的==。</li>
+  <li>A. start()方法来==启动线程==，真正实现了多线程运行，调用了run()方法；run()方法当作普通方法的方式调用。
+B. CyclicBarrier==让一组线程等待其他线程==；CountDownLatch==让一组线程等待某个事件发生。==
+C. Callable能够抛出checked exception。
+D. start()方法==让thread进入可运行状态（runnable），等待获取CPU的使用权==。</li>
+  <li>当使包含 ==applet 程序==时：<br />
+init(): 初始化；<br />
+start() 激活；<br />
+stop(): 当Applet被覆盖时，可用stop()方法停止线程， 典型作用是挂起一个线程，或者页面最小化；<br />
+destroy() ：终止Applet,释放Applet的所有资源</li>
+  <li>java.awt： 包含构成抽象窗口工具集的多个类，用来构建和管理应用程序的图形用户界面<br />
+java.lang： 提供java编成语言的程序设计的基础类<br />
+java.io：　 包含提供多种输出输入功能的类，<br />
+java.net：　 包含执行与网络有关的类，如URL，SCOKET，SEVERSOCKET，<br />
+java.applet： 包含java小应用程序的类
+java.util：　 包含一些实用性的类</li>
+  <li>JAVA语言的下面几种数组复制方法中：==效率==：System.arraycopy &gt; clone &gt; Arrays.copyOf &gt; for循环。</li>
+  <li>优化Hibernate所鼓励的7大措施：
+<em>1</em>.尽量使用many-to-one，避免使用单项one-to-many
+<em>2</em>.灵活使用单向one-to-many
+<em>3</em>。不用一对一，使用多对一代替一对一
+<em>4</em>。配置对象缓存，不使用集合缓存
+5.一对多使用Bag 多对一使用Set
+6.继承使用显示多态 HQL:from object polymorphism=”exlicit” 避免查处所有对象
+7.消除大表，使用二级缓存</li>
+  <li>java 对内存空间的划分五部分； 
+==栈、堆、方法区、本地方法区、寄存器==。 
+1、栈内存：存储都是局部变量。只要是在方法中定义的变量都是局部变量。 
+一旦变量的生命周期结束该变量就被释放。 
+2、堆内存都是实体（对象）（new 关键词创建的） 
+每一个实体都有一个首地址值。</li>
+</ol>

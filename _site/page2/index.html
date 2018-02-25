@@ -22,7 +22,7 @@
     <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="http://localhost:4000/">
+    <link rel="canonical" href="http://localhost:4000/page2/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -183,14 +183,38 @@
             ">
     			
 <div class="post-preview">
-    <a href="/2018/02/25/%E9%AB%98%E7%BA%A7%E7%AE%97%E6%B3%95/">
+    <a href="/2018/02/25/%E6%9F%A5%E6%89%BE/">
         <h2 class="post-title">
-            高级算法
+            查找
         </h2>
         
         <div class="post-content-preview">
-            高级算法
-1.包含四种算法：==数值概率算法==（数值问题的求解，最优化问题的近似解）、==蒙特罗卡Monte Carlo算法==（判定问题的准确解，不一定正确）、==拉斯维加斯Las Vegas算法==（不一定会得到解，但得到的解一定是正确解）、==舍伍德Sherwood算法==（总能求得一个解，且一定是正确解，主要作用是减少或是消除好的和坏的实例之间的差别）
+            查找
+
+  分块查找法要求将列表组织成以下索引顺序结构：
+首先将列表分成若干个块（子表）。一般情况下，块的长度均匀，最后一块可以不满。
+每块中元素任意排列，即块内无序，但块与块之间有序。
+构造一个索引表。==其中每个索引项对应一个块并记录每块的起始位置，和每块中最大
+关键字（或最小关键字）==。索引表按关键字有序排列。
+  二分查找即折半查找，必须 ==有序顺序存储==表。
+  对N个元素的...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by GG Blog on February 25, 2018
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2018/02/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+        <h2 class="post-title">
+            机器学习
+        </h2>
+        
+        <div class="post-content-preview">
+            机器学习
+1.在spss的基础分析模块中，作用是“==以行列表==的形式揭示数据之间的关系”的是==交叉表。==
 
         </div>
     </a>
@@ -201,20 +225,20 @@
 <hr>
 
 <div class="post-preview">
-    <a href="/2018/02/25/%E9%98%9F%E5%88%97/">
+    <a href="/2018/02/25/%E6%95%B0%E7%BB%84/">
         <h2 class="post-title">
-            队列
+            数组
         </h2>
         
         <div class="post-content-preview">
-            队列
+            数组
 
-  
-    假设==循环队列==的队尾指针是rear，队头是front，其中QueueSize为循环队列的最大长度。
-(1) 入队时队尾指针前进1：(rear+1)%QueueSize
-(2) 出队时队头指针前进1：(front+1)%QueueSize
-(3) 队列长度：(rear-front+QueueSize)%QueueSize
-(4) 队满条件为：(rear+1)%Que...
+  有序数组二分查找成功找到次数：第一次：==index=(0+length-1)/2==    第二次：==index’=(0+index-1)/2==，注意这里向==下==取整。
+  三元组做到下面三条便可实现矩阵的转置：
+（1）将矩阵的行列值交换。
+（2）将每个三元组中的 i 和 j 相互调换。
+（3）重排三元组之间的次序。
+  数组可通过==值参数、地址指针、引用参数==三种...
         </div>
     </a>
     <p class="post-meta">
@@ -224,83 +248,16 @@
 <hr>
 
 <div class="post-preview">
-    <a href="/2018/02/25/%E9%93%BE%E8%A1%A8/">
+    <a href="/2018/02/25/%E6%95%B0%E6%8D%AE%E5%BA%93/">
         <h2 class="post-title">
-            链表
-        </h2>
-        
-        <div class="post-content-preview">
-            链表
-
-  二分查找又称折半查找，优点是比较次数少，查找速度快，平均性能好；其缺点是要求==待查表为有序表、顺序存储结构==，且插入删除困难。
-  线性表中利用==带头结点的双循环链表==存储方式最省时间。
-  线性表的顺序存储结构是一种==随机存取、顺序存储==的存储结构。顺序存储指内存地址是一块的，随机存取指访问时可以按下标随机访问。
-  线性表有两种存储结构：
-1.==顺序存储结构—顺...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by GG Blog on February 25, 2018
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2018/02/25/%E9%80%92%E5%BD%92/">
-        <h2 class="post-title">
-            递归
-        </h2>
-        
-        <div class="post-content-preview">
-            递归
-
-  递归的过程，利用==栈==保存现场地址，然后将数据入栈，运算，后出栈，返回结果。递归工作栈里面包括==返回地址、本层的局部变量和递归调用的形参代换用实参==，所以正常情况下，无论递归过程有没有使用局部变量，转换为非递归过++程都需要用栈++来模拟这个递归调用过程
-  ==fork()给子进程返回一个零值，而给父进程返回一个非零值；==
-在main这个主进程中，首先执行 fork(...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by GG Blog on February 25, 2018
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2018/02/25/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/">
-        <h2 class="post-title">
-            软件工程
-        </h2>
-        
-        <div class="post-content-preview">
-            软件工程
-
-  从==总体到具体==的关联关系排列应该是软件工程、软件过程、软件产品、软件项目。
-  六种覆盖方法中==覆盖准则由弱到强==依次是++语句覆盖、判定覆盖（分支覆盖）、条件覆盖、判定/条件覆盖、条件组合覆盖、路径覆盖++。
-其中，
-语句覆盖是使得程序中每个语句至少被执行一次；
-判定覆盖是使得程序中的每个分支至少都通过一次；
-条件覆盖是使得判定中的每个条件获得各种可能的结果；
-判...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by GG Blog on February 25, 2018
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2018/02/25/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/">
-        <h2 class="post-title">
-            网络基础
+            数据库
         </h2>
         
         <div class="post-content-preview">
             网络基础
 
-  ICMP的差错报告都是==网关—源机==模式的：一旦发生错误，差错情况报告信源机.
-差错报文包括 ：目标不可到达（网络、协议、主机、端口不可到达；禁止分割、目标网络不认识、目标主机不认识等等）、超时、参数问题、重定向（网络重定向、主机重定向等）
-  IP报头中的==生存期（TTL）属性==，用来控制报文段在网络中的生存期。 当TTL值为0时，路由器判断数据包超时，发送ICMP...
+  ==逻辑独立性==是外模式不变，模式改变时，如增加新的关系，新的属性，改变属性的数据类型，由数据库管理员对各个外模式/模式的映像做相应改变，可以使得外模式不变，因为应用程序依据外模式编写的，所以外模式不变，应用程序也不变，即保证了逻辑独立。
+==物理独立性==是模式不变，内模式改变，如数据库存储结构发生改变，选用另一种数据结构，由数据库管理员对各个模式/内模式的映像做相应改变...
         </div>
     </a>
     <p class="post-meta">
@@ -310,19 +267,18 @@
 <hr>
 
 <div class="post-preview">
-    <a href="/2018/02/25/%E7%BC%96%E8%AF%91%E5%92%8C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/">
+    <a href="/2018/02/25/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
         <h2 class="post-title">
-            编译和体系结构
+            操作系统
         </h2>
         
         <div class="post-content-preview">
-            编译和体系结构
+            操作系统
 
-  十进制数加调整指令==DAA==(Decimal Adjust After Addition)该指令是用于调整AL的值,该值是由指令ADD或ADC运算二个压缩型BCD码所得到的结果.
-  ==指令指针寄存器==是IP，PSW即==程序状态字==。
-  ==微波==标签工作频率是 2.45GHz 。
-
-
+  设备分配主要采用 ==先来先服务== 和 ==优先级高者优先== 两种算法。
+  一个USB系统只能有一个USB主控制器，用8位地址表示下面的USB设备， 一共128个地址
+但是USB主控制器下面必须带一个Root Hub, hub也算一个设备，换句话说， 还剩下 ==127==个地址给用户。
+  文件系统采用二级目录结构，这样可以==解决不同用户之间的文件名的冲突问题.==...
         </div>
     </a>
     <p class="post-meta">
@@ -332,44 +288,19 @@
 <hr>
 
 <div class="post-preview">
-    <a href="/2018/02/25/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/">
+    <a href="/2018/02/25/%E6%8E%92%E5%BA%8F/">
         <h2 class="post-title">
-            编程基础
+            排序
         </h2>
         
         <div class="post-content-preview">
-            编程基础
+            排序
 
-  在程序中存放指令地址的寄存器叫==程序计数器==。
-  永久删除-》==Shift+Del==。
-  虚拟内存指的是==用硬盘中的一部分存储空间当作内存==。
-
-
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by GG Blog on February 25, 2018
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2018/02/25/%E6%A0%91/">
-        <h2 class="post-title">
-            树
-        </h2>
-        
-        <div class="post-content-preview">
-            树
-
-  m阶B-树的所有叶子都在==同一==层次上。
-  最优二叉树：哈夫曼树。
   
-    Kruskal算法是==按权值选边==，若选边后不形成回路,则保留作为一条边,若形成回路则除去。
-Prim算法是每次==从当前的二叉树节点向外延伸==的，选择权值最小的边。
+        
   
-  分支节点是度不为0的节点。设树高h,因为是满二叉树，所以叶子节点有2^(h-1)个。
-有n(n&gt;0)个分支...
+  外部排序指的是==大文件的排序==，即待排序的记录存储在外存储器上，==待排序的文件无法一次装入内存，需要在内存和外部存储器之间进行多次数据交换，以达到排序整个文件==的目的。外部排序最常用的算法是多路归并排序，即将原文件分解成多个能够一次性装入内存的部分，分别把每一部分调入内存完成排序。然后，对已经排序的子文件进行多路归并排序。
+  ==堆归选基=...
         </div>
     </a>
     <p class="post-meta">
@@ -379,18 +310,81 @@ Prim算法是每次==从当前的二叉树节点向外延伸==的，选择权值
 <hr>
 
 <div class="post-preview">
-    <a href="/2018/02/25/%E6%A0%88/">
+    <a href="/2018/02/25/%E5%B9%B6%E5%8F%91/">
         <h2 class="post-title">
-            栈
+            并发
         </h2>
         
         <div class="post-content-preview">
-            栈
+            并发
 
-  出栈不同排列顺序：卡特兰数公式 h(n)=C(2n[下]，n[上])/(n+1)，适用于出栈情况求和
-==C(2n,n)-C(2n,n+1)==
-  通常元素==进栈==的操作是先移动栈顶指针，再存入元素；元素==出栈==的操作是先取出元素，再移动栈顶指针。栈的顺序存储空间为S(1:50)，初始状态top=51，所以这个栈是50在栈底，1是==开口向上==的。
-  存储结构是数据的...
+  共享内==存并未提供同步==机制，当某一个进程对共享内存提供写操作时，并未自动的阻止另一个进程对它进行读取；++共享内存++：就是允许多个进程访问同一内存空间，进程间传递和共享数据非常有效。++信号量++：为了防止多个进程访问共享资源而造成冲突，设置临界区域每次只让一个进程访问，信号量提供了这样一种机制，用来控制对临界区域的访问。
+  （1）==轮询调度==的原理是每一次把来自用...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by GG Blog on February 25, 2018
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2018/02/25/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+        <h2 class="post-title">
+            字符串
+        </h2>
+        
+        <div class="post-content-preview">
+            字符串
+
+  子串数目：子串： ==n（n+1）/2 + 1==
+非空子串：==n（n+1）/2==
+非空真子串：==n（n+1）/2 - 1==
+  字符串最后以 ’ \0 ’ 结束。==strlen(str)函数==求字符串的长度，遇到’\0’是结束计算，不算 ‘\0’，且从1开始计数。 ==strcat(p1,p2)函数==要保证p1要有足够的空间来容纳p1和p2连接后的串长。==st...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by GG Blog on February 25, 2018
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2018/02/25/%E5%A4%8D%E6%9D%82%E5%BA%A6/">
+        <h2 class="post-title">
+            复杂度
+        </h2>
+        
+        <div class="post-content-preview">
+            复杂度
+
+  红黑树的插入复杂度：==O(log2(n))==
+
+
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by GG Blog on February 25, 2018
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2018/02/25/%E5%A0%86/">
+        <h2 class="post-title">
+            堆
+        </h2>
+        
+        <div class="post-content-preview">
+            堆
+
+  
+    堆是完全二叉树。
+  
+  堆排序中，当数组从0开始时，下标为k的结点的父结点下标==为(k-1)/2==；
+当数组从1开始时，下标为k的结点的父结点下标==为k/2==；
+  在用堆排序算法排序时,如果要进行==增序==排序,则需要采用“==大==根堆”，==减序==排列则要采用“==小==根堆”。
+  优先队列有两种，一种是最大优先队列；一种是最小优先队列；每次取自队...
         </div>
     </a>
     <p class="post-meta">
@@ -404,9 +398,13 @@ Prim算法是每次==从当前的二叉树节点向外延伸==的，选择权值
 
 <ul class="pager">
     
+    <li class="previous">
+        <a href="/">&larr; Newer Posts</a>
+    </li>
+    
     
     <li class="next">
-        <a href="/page2">Older Posts &rarr;</a>
+        <a href="/page3">Older Posts &rarr;</a>
     </li>
     
 </ul>
