@@ -10,7 +10,7 @@
     <meta name="keywords"  content="GG, GG Blog, 鸽鸽的博客, gege, 鸽鸽, Xi'an Jiaotong University, Computer Science and Technology, Tax, 天地网实验室">
     <meta name="theme-color" content="#000000">
     
-    <title>About - 鸽鸽的博客 | GG Blog</title>
+    <title>建立- Django项目 - 鸽鸽的博客 | GG Blog</title>
 
     <!-- Web App Manifest -->
     <link rel="manifest" href="/pwa/manifest.json">
@@ -22,7 +22,7 @@
     <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="http://localhost:4000/about/">
+    <link rel="canonical" href="http://localhost:4000/2018/03/02/%E5%BB%BA%E7%AB%8B-Django-%E9%A1%B9%E7%9B%AE/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -152,315 +152,396 @@
 </script>
 
 
-    <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/about-bg.jpg')">
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/post-bg-1.jpg" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        position: relative;
+        background-image: url('/img/post-bg-1.jpg')
+    }
+
+    
+</style>
+<header class="intro-header" >
+    <div class="header-mask"></div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>About</h1>
-                    <!--<hr class="small">-->
-                    <span class="subheading">Hey, this is GG.</span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#GitLab" title="GitLab">GitLab</a>
+                        
+                        <a class="tag" href="/tags/#GitLab - CI" title="GitLab - CI">GitLab - CI</a>
+                        
+                        <a class="tag" href="/tags/#GitLab - Runner" title="GitLab - Runner">GitLab - Runner</a>
+                        
+                    </div>
+                    <h1>建立- Django项目</h1>
+                    
+                    
+                    <h2 class="subheading">Django</h2>
+                    
+                    <span class="meta">Posted by GG on March 2, 2018</span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-	<div class="row">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+				<blockquote>
+
+  <p>这是一个基于python Django 搭建的小型项目</p>
+
+</blockquote>
+
+<h2 id="命令">命令</h2>
+
+<p>E:\IDEAworkspace&gt;cd learning_log</p>
+
+<p>E:\IDEAworkspace\learning_log&gt;python -m venv ll_env</p>
+<blockquote>
+  <p>建立虚拟环境，名为ll_env</p>
+</blockquote>
+
+<p>E:\IDEAworkspace\learning_log&gt;ll_env\Scripts\activate</p>
+<blockquote>
+  <p>激活启动环境</p>
+</blockquote>
+
+<p>(ll_env) E:\IDEAworkspace\learning_log&gt;pip install Django</p>
+
+<p>(ll_env) E:\IDEAworkspace\learning_log&gt;dir</p>
+
+<p>(ll_env) E:\IDEAworkspace\learning_log&gt;django-admin.py startproject learning_log .</p>
+<blockquote>
+  <p>注意最后的点，让项目有合适的目录结构</p>
+</blockquote>
+
+<p>(ll_env) E:\IDEAworkspace\learning_log&gt;python manage.py migrate</p>
+<blockquote>
+  <p>创建数据库db.sqlite3.sqlLite 是一种使用单个文件的数据库</p>
+</blockquote>
+
+<p>(ll_env) E:\IDEAworkspace\learning_log&gt;python manage.py runserver （8002）</p>
+<blockquote>
+  <p>在http://127.0.0.1:8000/端口查看是否启动成功</p>
+</blockquote>
+
+<p>(ll_env) E:\IDEAworkspace\learning_log&gt;python manage.py startapp learning_logs</p>
+<blockquote>
+  <p>另开一个terimal 。输上述命令让Django 创建应用所需的基础设施</p>
+</blockquote>
+
+<p>(ll_env) E:\IDEAworkspace\learning_log&gt;python manage.py makemigrations learning_logs</p>
+<blockquote>
+  <p>让Django修改数据库，时期可以存储新定义的模型Topic</p>
+</blockquote>
+
+<p>(ll_env) E:\IDEAworkspace\learning_log&gt;python manage.py migrate</p>
+<blockquote>
+  <p>让Django迁移项目</p>
+</blockquote>
+
+<p>(ll_env) E:\IDEAworkspace\learning_log&gt;python manage.py createsuperuser</p>
+<blockquote>
+  <p>创建超级用户，通过http://127.0.0.1:8000/admin/    用户名/秘密：ll_admin/ll_admin</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>每次在model.py 中创建新的模型，都需要重新迁移数据库</p>
+  </li>
+  <li>
+    <p>(ll_env) E:\IDEAworkspace\learning_log&gt;python manage.py makemigrations learning_logs</p>
+  </li>
+  <li>(ll_env) E:\IDEAworkspace\learning_log&gt;python manage.py migrate</li>
+  <li>admin.py中注册一下，即可在管理员页面看到</li>
+</ul>
+
+<h2 id="交互式终端会话">交互式终端会话</h2>
+<p>(ll_env) E:\IDEAworkspace\learning_log&gt;python manage.py shell</p>
+
+<p>/»&gt; from learning_logs.models import Topic</p>
+
+<p>/»&gt; Topic.objects.all()</p>
+
+<p>&lt;QuerySet [<Topic: Chess="">, <Topic: Rock="" Climbing="">]&gt;</Topic:></Topic:></p>
+
+<p>//»&gt; topics=Topic.onjects.all()</p>
+
+<p>Traceback (most recent call last):</p>
+
+<p>File “<console>", line 1, in <module></module></console></p>
+
+<p>AttributeError: type object ‘Topic’ has no attribute ‘onjects’</p>
+
+<p>/»&gt; topics=Topic.objects.all()</p>
+
+<p>/»&gt; for topic in topics:</p>
+
+<p>…     print(topic.id,topic)</p>
+
+<p>…</p>
+
+<p>1 Chess</p>
+
+<p>2 Rock Climbing</p>
+
+<p>/»&gt; t=Topic.objects.get(id=1)</p>
+
+<p>/»&gt; t.text</p>
+
+<p>‘Chess’</p>
+
+<p>/»&gt; t.date_added</p>
+
+<p>datetime.datetime(2017, 12, 6, 2, 22, 41, 617396, tzinfo=<UTC>)</UTC></p>
+
+<p>/»&gt; t.entry_set.all()</p>
+
+<p>&lt;QuerySet [&lt;Entry: 象棋，亦作“象碁”、中国象棋（英文名Chinese chess），中国传统棋类益智游戏，在中国有着悠…&gt;, &lt;Entry: 棋盘
+棋子活动的场所，叫作“棋盘”。在长方形的平面上，绘有九条平行的竖线和十条平行的横线相交组成，…&gt;]&gt;</p>
+
+<blockquote>
+  <p>通过外键关系获取时，可使用相关模型小写名称、下划线、单词set组合</p>
+</blockquote>
+
+<h2 id="部署">部署</h2>
+<p>(ll_env) E:\IDEAworkspace\learning_log&gt;pip install dj-database-url</p>
+
+<p>(ll_env) E:\IDEAworkspace\learning_log&gt;pip install dj-static</p>
+
+<p>(ll_env) E:\IDEAworkspace\learning_log&gt;pip install static3</p>
+
+<p>(ll_env) E:\IDEAworkspace\learning_log&gt;pip install gunicorn</p>
+
+<p>(ll_env) E:\IDEAworkspace\learning_log&gt;pip freeze &gt; requirements.txt</p>
+
+<blockquote>
+  <p>命令freeze 将项目中当前安装的所有包名都写入到文件 requirements.txt中。</p>
+</blockquote>
+
+<h2 id="步骤">步骤</h2>
+
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.rpm.sh</td>
+          <td>sudo bash		<可去掉sudo></可去掉sudo></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>sudo yum install gitlab-runner</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>yum list gitlab-runner –showduplicates</td>
+          <td>sort -r</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>sudo yum install gitlab-runner-10.0.0-1</li>
+  <li>sudo gitlab-runner register</li>
+  <li>安装项目中所需库</li>
+  <li>执行运行项目（）的命令：nohup python3 /opt/learning_log/manage.py runserver &amp;&gt;/dev/null &amp;</li>
+</ul>
+
+
+                <hr style="visibility: hidden;">
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2018/03/01/%E4%BD%BF%E7%94%A8-gitLab-%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE/" data-toggle="tooltip" data-placement="top" title="使用- gitLab 部署项目">
+                        Previous<br>
+                        <span>使用- gitLab 部署项目</span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2018/03/05/Hadoop-2.2.0%E5%8D%95%E8%8A%82%E7%82%B9%E5%AE%89%E8%A3%85/" data-toggle="tooltip" data-placement="top" title="Hadoop- 2.2.0单节点安装">
+                        Next<br>
+                        <span>Hadoop- 2.2.0单节点安装</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+
+
+                <!--Gitalk评论start  -->
+                
+                <!-- 引入Gitalk评论插件  -->
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+                <div id="gitalk-container"></div>
+                <script type="text/javascript">
+                    var gitalk = new Gitalk({
+                    clientID: 'ed8e36c0b4cc3a8f441a',
+                    clientSecret: '40a0dfa25e27ce7a5d28e99fc69b9da9d44ecef9',
+                    repo: 'gg-lige.github.io',
+                    owner: 'gg-lige',
+                    admin: ['gg-lige'],
+                    distractionFreeMode: true,
+                    id: window.location.pathname,
+                    });
+                    gitalk.render('gitalk-container');
+                </script>
+                
+                <!-- Gitalk end -->
+
+                
+
+            </div>  
+
+    <!-- Side Catalog Container -->
+        
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
         
 
-<!-- USE SIDEBAR -->
-    <!-- PostList Container -->
-    		<div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                postlist-container
-            ">
-    			<!-- Language Selector -->
-<!-- <select class="sel-lang" onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
-    <option value="0" selected> 中文 Chinese </option>
-    <option value="1"> 英文 English </option>
-</select> -->
-
-<!-- Chinese Version -->
-<div class="zh post-container">
-
-    <!--copied from markdown -->
-    <blockquote><p>不登高山,不知天之高也<br>
-    不临深溪,不知地之厚也</p></blockquote>
-
-    <p>Hey，我是<strong>鸽鸽(GG)</strong>，一只程序猿，现就读于西安交通大学。</p>
-
-    <p>学习之余，我还是一个健身爱好者，喜欢流汗的感觉，同时也非常喜欢唱歌。</p>
-
-    <p>这是我的利用 <a href="https://pages.github.com/">GitHub Pages</a> 与 <a href="http://jekyll.com.cn/">Jekyll</a> 搭建的 个人博客。我的GitHub主页<a href="https://github.com/gg-lige">👉GitHub·GG</a> 。如果有什么问题，欢迎提出探讨~</p>
-
-    <p></p>
-    
-    <h5>Talks</h5>
-
-    <ul>
-        <li><a href="https://github.com">GitHub</a></li>
-        <li><a href="http://jekyll.com.cn/">jekyll</a></li>
-        <li><a href="http://huangxuan.me/">Hux</a></li> 
-        <li><a href="https://analytics.google.com/analytics">Google Analytics</a></li>
-    </ul>
-</div>
-
-<!-- English Version -->
-<!-- <div class="en post-container">
-    <blockquote><p>Yet another iOS Developer. <br>
-    Yet another Life-long Student.</p></blockquote>
-
-    <p>Hi, I am <strong>Baiying Qiu</strong>，you can call me <strong>BY</strong>. I am an iOS software engineer and currently working in Xiamen</p>
-
-    <p>This is my personal blog, through making Github Pages and Jekyll.My GitHub  👉 <a href="http://github.com/qiubaiying">Github·BY</a>.</p>
-    
-    <p>I am a sports enthusiast, I like fitness, running and boxing.</p>
-
-    <h5>Talks</h5>
-
-    <ul>
-    <li><a href="https://github.com">GitHub</a></li>
-    <li><a href="http://jekyll.com.cn/">jekyll</a></li>
-    <li><a href="https://pages.github.com/">GitHub Pages</a></li>
-    <li><a href="https://qiubaiying.github.io">BY</a></li>
-    </ul>
-</div> -->
-
-<!-- Handle Language Change -->
-<script type="text/javascript">
-    // get nodes
-    var $zh = document.querySelector(".zh");
-    var $en = document.querySelector(".en");
-    var $select = document.querySelector("select");
-
-    // bind hashchange event
-    window.addEventListener('hashchange', _render);
-
-    // handle render
-    function _render(){
-        var _hash = window.location.hash;
-        // en
-        if(_hash == "#en"){
-            $select.selectedIndex = 1;
-            $en.style.display = "block";
-            $zh.style.display = "none";
-        // zh by default
-        }else{
-            // not trigger onChange, otherwise cause a loop call.
-            $select.selectedIndex = 0;
-            $zh.style.display = "block";
-            $en.style.display = "none";
-        }
-    }
-
-    // handle select change
-    function onLanChange(index){
-        if(index == 0){
-            window.location.hash = "#zh"
-        }else{
-            window.location.hash = "#en"
-        }
-    }
-
-    // init
-    _render();
-</script>
-
-
-<!-- Gitalk 评论 start  -->
-
-<!-- Gitalk link  -->
-<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
-
-<div id="gitalk-container"></div>
-    <script type="text/javascript">
-    var gitalk = new Gitalk({
-    clientID: 'ed8e36c0b4cc3a8f441a',
-    clientSecret: '40a0dfa25e27ce7a5d28e99fc69b9da9d44ecef9',
-    repo: 'gg-lige.github.io',
-    owner: 'gg-lige',
-    admin: ['gg-lige'],
-    distractionFreeMode: true,
-    id: 'about',
-    });
-    gitalk.render('gitalk-container');
-</script>
-
-<!-- Gitalk end -->
-
- <!-- disqus 评论框 start  -->
-
-
-
-    		</div>
     <!-- Sidebar Container -->
             <div class="
-                col-lg-3 col-lg-offset-0
-                col-md-3 col-md-offset-0
-                col-sm-12
-                col-xs-12
-                sidebar-container
-            ">
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
                 <!-- Featured Tags -->
                 
                 <section>
                     <hr class="hidden-sm hidden-xs">
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                                <a href="/tags/#网络基础" title="网络基础" rel="2">
+                				<a href="/tags/#网络基础" title="网络基础" rel="2">
                                     网络基础
                                 </a>
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                                <a href="/tags/#Git" title="Git" rel="3">
+                				<a href="/tags/#Git" title="Git" rel="3">
                                     Git
                                 </a>
                             
-                        
+        				
                             
-                                <a href="/tags/#Github" title="Github" rel="2">
+                				<a href="/tags/#Github" title="Github" rel="2">
                                     Github
                                 </a>
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                                <a href="/tags/#GitLab" title="GitLab" rel="2">
+                				<a href="/tags/#GitLab" title="GitLab" rel="2">
                                     GitLab
                                 </a>
                             
-                        
+        				
                             
-                                <a href="/tags/#GitLab - CI" title="GitLab - CI" rel="2">
+                				<a href="/tags/#GitLab - CI" title="GitLab - CI" rel="2">
                                     GitLab - CI
                                 </a>
                             
-                        
+        				
                             
-                                <a href="/tags/#GitLab - Runner" title="GitLab - Runner" rel="2">
+                				<a href="/tags/#GitLab - Runner" title="GitLab - Runner" rel="2">
                                     GitLab - Runner
                                 </a>
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
-                    </div>
+        				
+        			</div>
                 </section>
                 
 
-                <!-- Short About -->
-                <section class="visible-md visible-lg">
-                    <hr><h5><a href="/about/">ABOUT ME</a></h5>
-                    <div class="short-about">
-                        
-                            <a href="/about">
-                                <img src="/img/about-GG.jpg"/>
-                            </a>
-                        
-                        
-                            <p>Goals determine what you going to be!</p>
-                        
-                        <!-- SNS Link -->
-                        <ul class="list-inline">
-                            
-                            <!-- add jianshu add target = "_blank" to <a> by BY -->
-                            
-                            
-                            
-                            <li>
-                                <a target="_blank" href="https://www.zhihu.com/people/鸽鸽">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa  fa-stack-1x fa-inverse">知</i>
-                                    </span>
-                                </a>
-                            </li>
-                            
-                            
-                            
-                            
-                            <li>
-                                <a target="_blank" href="https://github.com/gg-lige">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            
-                            
-                        </ul>
-                        
-                            <p>✉️ gg_lige@163.com</p>
-                        
-                    </div>
-                </section>
                 <!-- Friends Blog -->
                 
                 <hr>
@@ -473,10 +554,49 @@
                     
                 </ul>
                 
-    		</div>
-        
-	</div>
-</div>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
 
 
     <!-- Footer -->
@@ -620,6 +740,50 @@
 
 
 <!-- Side Catalog -->
+
+<script type="text/javascript">
+    function generateCatalog (selector) {
+        var P = $('div.post-container'),a,n,t,l,i,c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#"+$(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="'+i+'" rel="nofollow">'+t+'</a>');
+            l = $('<li class="'+n+'_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;    
+    }
+
+    generateCatalog(".catalog-body");
+
+    // toggle side catalog
+    $(".catalog-toggle").click((function(e){
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    /*
+     * Doc: https://github.com/davist11/jQuery-One-Page-Nav
+     * Fork by Hux to support padding
+     */
+    async("/js/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
 
 
 

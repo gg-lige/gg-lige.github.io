@@ -183,10 +183,238 @@
             ">
     			
 <div class="post-preview">
+    <a href="/2018/03/05/Hadoop-2.2.0%E5%8D%95%E8%8A%82%E7%82%B9%E5%AE%89%E8%A3%85/">
+        <h2 class="post-title">
+            Hadoop- 2.2.0单节点安装
+        </h2>
+        
+        <h3 class="post-subtitle">
+            Hadoop 安装配置
+        </h3>
+        
+        <div class="post-content-preview">
+            
+
+  本文是Hadoop2单节点安装的说明手册。包括Hadoop 2.2.0版本的在单个计算节点上Standalone模式的安装过程，主要用于测试开发目的。
+ 生产环境的安装请参考其他文档。
+
+
+
+系统需求
+以下说明Hadoop 2.2.0安装的基本需求。
+系统硬件
+Intel x86_64服务器。
+系统软件
+建议采用Ubuntu 12.04.3 LTS Server x64版本或者其他长...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by GG on March 5, 2018
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2018/03/02/%E5%BB%BA%E7%AB%8B-Django-%E9%A1%B9%E7%9B%AE/">
+        <h2 class="post-title">
+            建立- Django项目
+        </h2>
+        
+        <h3 class="post-subtitle">
+            Django
+        </h3>
+        
+        <div class="post-content-preview">
+            
+
+  这是一个基于python Django 搭建的小型项目
+
+
+
+命令
+
+E:\IDEAworkspace&gt;cd learning_log
+
+E:\IDEAworkspace\learning_log&gt;python -m venv ll_env
+
+  建立虚拟环境，名为ll_env
+
+
+E:\IDEAworkspace\learning_log&gt;ll_env\Scrip...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by GG on March 2, 2018
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2018/03/01/%E4%BD%BF%E7%94%A8-gitLab-%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE/">
+        <h2 class="post-title">
+            使用- gitLab 部署项目
+        </h2>
+        
+        <h3 class="post-subtitle">
+            部署项目
+        </h3>
+        
+        <div class="post-content-preview">
+            
+  使用 gitlab-runner CI 部署项目
+
+
+简介
+
+gitlab-ci全称是gitlab continuous integration的意思，也就是持续集成。
+
+中心思想是当每一次push到gitlab的时候，都会触发一次脚本执行，然后脚本的内容包括了测试，编译，部署等一系列自定义的内容。
+
+本文就是利用gitlab-ci的持续集成来实现自动部署。相比之前webhook的自动...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by GG on March 1, 2018
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2018/03/01/%E4%BD%BF%E7%94%A8-git-gui%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/">
+        <h2 class="post-title">
+            使用git gui上传文件
+        </h2>
+        
+        <h3 class="post-subtitle">
+            git gui 的相关使用
+        </h3>
+        
+        <div class="post-content-preview">
+            
+  使用 git gui 方便版本控制操作
+
+
+Eclipse 中上传项目
+
+
+  
+    
+      建立ssh连接【可由Eclipse配好ssh（windows-preferences-SSH2），将.ssh中的公钥拷贝到gitLab的ssh中】
+    
+  
+  
+    
+      fork需要修改的项目到自己的远程仓库下 OR 不需fork,在项目下new branch ...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by GG on March 1, 2018
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2018/02/28/%E4%BD%BF%E7%94%A8-.gitignore-%E5%BF%BD%E7%95%A5-git-%E4%BB%93%E5%BA%93%E4%B8%AD%E7%9A%84%E6%96%87%E4%BB%B6/">
+        <h2 class="post-title">
+            使用 .gitignore 忽略 Git 仓库中的文件
+        </h2>
+        
+        <h3 class="post-subtitle">
+            .gitignore 文件在Git中的使用
+        </h3>
+        
+        <div class="post-content-preview">
+            
+  使用 .gitignore 文件忽略指定文件
+
+
+.gitignore
+
+在Git中，很多时候你只想将代码提交到仓库，而不是将当前文件目录下的文件全部提交到Git仓库中，例如在MacOS系统下面的.DS_Store文件，或者是Xocde的操作记录，又或者是pod库的中一大串的源代码。这种情况下使用.gitignore就能够在Git提交时自动忽略掉这些文件。
+
+忽略的格式
+
+
+  # :...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by GG on February 28, 2018
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2018/02/27/Git%E6%8C%87%E4%BB%A4%E6%95%B4%E7%90%86/">
+        <h2 class="post-title">
+            Git指令整理
+        </h2>
+        
+        <h3 class="post-subtitle">
+            个人常用的 Git 指令
+        </h3>
+        
+        <div class="post-content-preview">
+            
+  随便整理的一些自用的Git指令
+
+
+GitHub创建仓库提示代码
+
+echo "# 项目名" &gt;&gt; README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:qiubaiying/项目名.git
+git push -u orig...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by GG on February 27, 2018
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2018/02/27/Git-%E4%BB%A3%E7%A0%81%E5%9B%9E%E6%BB%9A/">
+        <h2 class="post-title">
+            Git 代码回滚
+        </h2>
+        
+        <h3 class="post-subtitle">
+            回滚代码的正确姿势
+        </h3>
+        
+        <div class="post-content-preview">
+            
+  并不适合阅读的个人文档。
+
+
+git revert 和 git reset 的区别
+先看图：
+
+
+
+sourceTree 中 revert 译为提交回滚，作用为忽略你指定的版本，然后提交一个新的版本。新的版本中已近删除了你所指定的版本。
+
+reset 为 重置到这次提交，将内容重置到指定的版本。git reset 命令后面是需要加2种参数的：–-hard 和 –-soft。这条命令默认...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by GG on February 27, 2018
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
     <a href="/2018/02/25/%E9%AB%98%E7%BA%A7%E7%AE%97%E6%B3%95/">
         <h2 class="post-title">
             高级算法
         </h2>
+        
+        <h3 class="post-subtitle">
+            知识点总结
+        </h3>
         
         <div class="post-content-preview">
             高级算法
@@ -195,7 +423,7 @@
         </div>
     </a>
     <p class="post-meta">
-        Posted by GG Blog on February 25, 2018
+        Posted by GG on February 25, 2018
     </p>
 </div>
 <hr>
@@ -205,6 +433,10 @@
         <h2 class="post-title">
             队列
         </h2>
+        
+        <h3 class="post-subtitle">
+            知识点总结
+        </h3>
         
         <div class="post-content-preview">
             队列
@@ -218,7 +450,7 @@
         </div>
     </a>
     <p class="post-meta">
-        Posted by GG Blog on February 25, 2018
+        Posted by GG on February 25, 2018
     </p>
 </div>
 <hr>
@@ -228,6 +460,10 @@
         <h2 class="post-title">
             链表
         </h2>
+        
+        <h3 class="post-subtitle">
+            知识点总结
+        </h3>
         
         <div class="post-content-preview">
             链表
@@ -240,161 +476,7 @@
         </div>
     </a>
     <p class="post-meta">
-        Posted by GG Blog on February 25, 2018
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2018/02/25/%E9%80%92%E5%BD%92/">
-        <h2 class="post-title">
-            递归
-        </h2>
-        
-        <div class="post-content-preview">
-            递归
-
-  递归的过程，利用==栈==保存现场地址，然后将数据入栈，运算，后出栈，返回结果。递归工作栈里面包括==返回地址、本层的局部变量和递归调用的形参代换用实参==，所以正常情况下，无论递归过程有没有使用局部变量，转换为非递归过++程都需要用栈++来模拟这个递归调用过程
-  ==fork()给子进程返回一个零值，而给父进程返回一个非零值；==
-在main这个主进程中，首先执行 fork(...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by GG Blog on February 25, 2018
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2018/02/25/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/">
-        <h2 class="post-title">
-            软件工程
-        </h2>
-        
-        <div class="post-content-preview">
-            软件工程
-
-  从==总体到具体==的关联关系排列应该是软件工程、软件过程、软件产品、软件项目。
-  六种覆盖方法中==覆盖准则由弱到强==依次是++语句覆盖、判定覆盖（分支覆盖）、条件覆盖、判定/条件覆盖、条件组合覆盖、路径覆盖++。
-其中，
-语句覆盖是使得程序中每个语句至少被执行一次；
-判定覆盖是使得程序中的每个分支至少都通过一次；
-条件覆盖是使得判定中的每个条件获得各种可能的结果；
-判...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by GG Blog on February 25, 2018
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2018/02/25/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/">
-        <h2 class="post-title">
-            网络基础
-        </h2>
-        
-        <div class="post-content-preview">
-            网络基础
-
-  ICMP的差错报告都是==网关—源机==模式的：一旦发生错误，差错情况报告信源机.
-差错报文包括 ：目标不可到达（网络、协议、主机、端口不可到达；禁止分割、目标网络不认识、目标主机不认识等等）、超时、参数问题、重定向（网络重定向、主机重定向等）
-  IP报头中的==生存期（TTL）属性==，用来控制报文段在网络中的生存期。 当TTL值为0时，路由器判断数据包超时，发送ICMP...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by GG Blog on February 25, 2018
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2018/02/25/%E7%BC%96%E8%AF%91%E5%92%8C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/">
-        <h2 class="post-title">
-            编译和体系结构
-        </h2>
-        
-        <div class="post-content-preview">
-            编译和体系结构
-
-  十进制数加调整指令==DAA==(Decimal Adjust After Addition)该指令是用于调整AL的值,该值是由指令ADD或ADC运算二个压缩型BCD码所得到的结果.
-  ==指令指针寄存器==是IP，PSW即==程序状态字==。
-  ==微波==标签工作频率是 2.45GHz 。
-
-
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by GG Blog on February 25, 2018
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2018/02/25/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/">
-        <h2 class="post-title">
-            编程基础
-        </h2>
-        
-        <div class="post-content-preview">
-            编程基础
-
-  在程序中存放指令地址的寄存器叫==程序计数器==。
-  永久删除-》==Shift+Del==。
-  虚拟内存指的是==用硬盘中的一部分存储空间当作内存==。
-
-
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by GG Blog on February 25, 2018
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2018/02/25/%E6%A0%91/">
-        <h2 class="post-title">
-            树
-        </h2>
-        
-        <div class="post-content-preview">
-            树
-
-  m阶B-树的所有叶子都在==同一==层次上。
-  最优二叉树：哈夫曼树。
-  
-    Kruskal算法是==按权值选边==，若选边后不形成回路,则保留作为一条边,若形成回路则除去。
-Prim算法是每次==从当前的二叉树节点向外延伸==的，选择权值最小的边。
-  
-  分支节点是度不为0的节点。设树高h,因为是满二叉树，所以叶子节点有2^(h-1)个。
-有n(n&gt;0)个分支...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by GG Blog on February 25, 2018
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2018/02/25/%E6%A0%88/">
-        <h2 class="post-title">
-            栈
-        </h2>
-        
-        <div class="post-content-preview">
-            栈
-
-  出栈不同排列顺序：卡特兰数公式 h(n)=C(2n[下]，n[上])/(n+1)，适用于出栈情况求和
-==C(2n,n)-C(2n,n+1)==
-  通常元素==进栈==的操作是先移动栈顶指针，再存入元素；元素==出栈==的操作是先取出元素，再移动栈顶指针。栈的顺序存储空间为S(1:50)，初始状态top=51，所以这个栈是50在栈底，1是==开口向上==的。
-  存储结构是数据的...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by GG Blog on February 25, 2018
+        Posted by GG on February 25, 2018
     </p>
 </div>
 <hr>
@@ -427,6 +509,98 @@ Prim算法是每次==从当前的二叉树节点向外延伸==的，选择权值
                     <hr class="hidden-sm hidden-xs">
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                                <a href="/tags/#网络基础" title="网络基础" rel="2">
+                                    网络基础
+                                </a>
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                                <a href="/tags/#Git" title="Git" rel="3">
+                                    Git
+                                </a>
+                            
+                        
+                            
+                                <a href="/tags/#Github" title="Github" rel="2">
+                                    Github
+                                </a>
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                                <a href="/tags/#GitLab" title="GitLab" rel="2">
+                                    GitLab
+                                </a>
+                            
+                        
+                            
+                                <a href="/tags/#GitLab - CI" title="GitLab - CI" rel="2">
+                                    GitLab - CI
+                                </a>
+                            
+                        
+                            
+                                <a href="/tags/#GitLab - Runner" title="GitLab - Runner" rel="2">
+                                    GitLab - Runner
+                                </a>
+                            
+                        
+                            
+                        
+                            
                         
                             
                         

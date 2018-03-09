@@ -10,7 +10,7 @@
     <meta name="keywords"  content="GG, GG Blog, 鸽鸽的博客, gege, 鸽鸽, Xi'an Jiaotong University, Computer Science and Technology, Tax, 天地网实验室">
     <meta name="theme-color" content="#000000">
     
-    <title>About - 鸽鸽的博客 | GG Blog</title>
+    <title>使用git gui上传文件 - 鸽鸽的博客 | GG Blog</title>
 
     <!-- Web App Manifest -->
     <link rel="manifest" href="/pwa/manifest.json">
@@ -22,7 +22,7 @@
     <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="http://localhost:4000/about/">
+    <link rel="canonical" href="http://localhost:4000/2018/03/01/%E4%BD%BF%E7%94%A8-git-gui%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -152,315 +152,286 @@
 </script>
 
 
-    <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/about-bg.jpg')">
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/post-bg-1.jpg" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        position: relative;
+        background-image: url('/img/post-bg-1.jpg')
+    }
+
+    
+</style>
+<header class="intro-header" >
+    <div class="header-mask"></div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>About</h1>
-                    <!--<hr class="small">-->
-                    <span class="subheading">Hey, this is GG.</span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#Git Gui" title="Git Gui">Git Gui</a>
+                        
+                        <a class="tag" href="/tags/#Github" title="Github">Github</a>
+                        
+                        <a class="tag" href="/tags/#Eclipse" title="Eclipse">Eclipse</a>
+                        
+                    </div>
+                    <h1>使用git gui上传文件</h1>
+                    
+                    
+                    <h2 class="subheading">git gui 的相关使用</h2>
+                    
+                    <span class="meta">Posted by GG on March 1, 2018</span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-	<div class="row">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+				<blockquote>
+  <p>使用 git gui 方便版本控制操作</p>
+</blockquote>
+
+<h2 id="eclipse-中上传项目">Eclipse 中上传项目</h2>
+
+<ul>
+  <li>
+    <ol>
+      <li>建立ssh连接【可由Eclipse配好ssh（windows-preferences-SSH2），将.ssh中的公钥拷贝到gitLab的ssh中】</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>fork需要修改的项目到自己的远程仓库下 OR 不需fork,在项目下new branch  -lg</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>eclipse中git下载项目【从自己的远程仓库下载到本地仓库】</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>完成某次代码修改。项目名-右键-Team-commit-commit and push 选择相应的URI和GitLab的账号</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>完成某阶段修改，需要merge。</li>
+    </ol>
+  </li>
+</ul>
+
+<h2 id="git-gui">Git Gui</h2>
+
+<ul>
+  <li>clone ：克隆（clone）在需要建立库的目录下点击右键选择：“Git Gui”,在弹出窗口点击“克隆已经版本库”, 然后在Source Location中输入完整的待克隆版本库所在地址，在Target Directory中输入或选择本地的目录（请注意此处会自动新建一个目录，不需要提前建立！）</li>
+  <li>默认克隆得到的是master分支，所以现在需要创建自己的分支（lg分支），修改代码时，只在lg分支上进行修改。点branch  create 在本地创建分支</li>
+  <li>切换分支：branch -checkout  -lg 确定。</li>
+  <li>完成修改，首先commit .
+-再次fetch master仓库的代码</li>
+  <li>merge –local merge.</li>
+  <li>Remote – Push 给origin（这时会在远程端建立lg分支）</li>
+  <li>在gitLab客户端 ，选择lg分支merge request给master分支。</li>
+</ul>
+
+<h2 id="上传至不同-gitlab-或-github-远程仓库">上传至不同 gitlab 或 github 远程仓库</h2>
+
+<ul>
+  <li>Remote-add-Name填写远程仓库的（自己起名）和远程仓库的位置，最后commit-putsh 至 自己起名的远程仓库。</li>
+</ul>
+
+
+                <hr style="visibility: hidden;">
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2018/02/28/%E4%BD%BF%E7%94%A8-.gitignore-%E5%BF%BD%E7%95%A5-git-%E4%BB%93%E5%BA%93%E4%B8%AD%E7%9A%84%E6%96%87%E4%BB%B6/" data-toggle="tooltip" data-placement="top" title="使用 .gitignore 忽略 Git 仓库中的文件">
+                        Previous<br>
+                        <span>使用 .gitignore 忽略 Git 仓库中的文件</span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2018/03/01/%E4%BD%BF%E7%94%A8-gitLab-%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE/" data-toggle="tooltip" data-placement="top" title="使用- gitLab 部署项目">
+                        Next<br>
+                        <span>使用- gitLab 部署项目</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+
+
+                <!--Gitalk评论start  -->
+                
+                <!-- 引入Gitalk评论插件  -->
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+                <div id="gitalk-container"></div>
+                <script type="text/javascript">
+                    var gitalk = new Gitalk({
+                    clientID: 'ed8e36c0b4cc3a8f441a',
+                    clientSecret: '40a0dfa25e27ce7a5d28e99fc69b9da9d44ecef9',
+                    repo: 'gg-lige.github.io',
+                    owner: 'gg-lige',
+                    admin: ['gg-lige'],
+                    distractionFreeMode: true,
+                    id: window.location.pathname,
+                    });
+                    gitalk.render('gitalk-container');
+                </script>
+                
+                <!-- Gitalk end -->
+
+                
+
+            </div>  
+
+    <!-- Side Catalog Container -->
+        
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
         
 
-<!-- USE SIDEBAR -->
-    <!-- PostList Container -->
-    		<div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                postlist-container
-            ">
-    			<!-- Language Selector -->
-<!-- <select class="sel-lang" onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
-    <option value="0" selected> 中文 Chinese </option>
-    <option value="1"> 英文 English </option>
-</select> -->
-
-<!-- Chinese Version -->
-<div class="zh post-container">
-
-    <!--copied from markdown -->
-    <blockquote><p>不登高山,不知天之高也<br>
-    不临深溪,不知地之厚也</p></blockquote>
-
-    <p>Hey，我是<strong>鸽鸽(GG)</strong>，一只程序猿，现就读于西安交通大学。</p>
-
-    <p>学习之余，我还是一个健身爱好者，喜欢流汗的感觉，同时也非常喜欢唱歌。</p>
-
-    <p>这是我的利用 <a href="https://pages.github.com/">GitHub Pages</a> 与 <a href="http://jekyll.com.cn/">Jekyll</a> 搭建的 个人博客。我的GitHub主页<a href="https://github.com/gg-lige">👉GitHub·GG</a> 。如果有什么问题，欢迎提出探讨~</p>
-
-    <p></p>
-    
-    <h5>Talks</h5>
-
-    <ul>
-        <li><a href="https://github.com">GitHub</a></li>
-        <li><a href="http://jekyll.com.cn/">jekyll</a></li>
-        <li><a href="http://huangxuan.me/">Hux</a></li> 
-        <li><a href="https://analytics.google.com/analytics">Google Analytics</a></li>
-    </ul>
-</div>
-
-<!-- English Version -->
-<!-- <div class="en post-container">
-    <blockquote><p>Yet another iOS Developer. <br>
-    Yet another Life-long Student.</p></blockquote>
-
-    <p>Hi, I am <strong>Baiying Qiu</strong>，you can call me <strong>BY</strong>. I am an iOS software engineer and currently working in Xiamen</p>
-
-    <p>This is my personal blog, through making Github Pages and Jekyll.My GitHub  👉 <a href="http://github.com/qiubaiying">Github·BY</a>.</p>
-    
-    <p>I am a sports enthusiast, I like fitness, running and boxing.</p>
-
-    <h5>Talks</h5>
-
-    <ul>
-    <li><a href="https://github.com">GitHub</a></li>
-    <li><a href="http://jekyll.com.cn/">jekyll</a></li>
-    <li><a href="https://pages.github.com/">GitHub Pages</a></li>
-    <li><a href="https://qiubaiying.github.io">BY</a></li>
-    </ul>
-</div> -->
-
-<!-- Handle Language Change -->
-<script type="text/javascript">
-    // get nodes
-    var $zh = document.querySelector(".zh");
-    var $en = document.querySelector(".en");
-    var $select = document.querySelector("select");
-
-    // bind hashchange event
-    window.addEventListener('hashchange', _render);
-
-    // handle render
-    function _render(){
-        var _hash = window.location.hash;
-        // en
-        if(_hash == "#en"){
-            $select.selectedIndex = 1;
-            $en.style.display = "block";
-            $zh.style.display = "none";
-        // zh by default
-        }else{
-            // not trigger onChange, otherwise cause a loop call.
-            $select.selectedIndex = 0;
-            $zh.style.display = "block";
-            $en.style.display = "none";
-        }
-    }
-
-    // handle select change
-    function onLanChange(index){
-        if(index == 0){
-            window.location.hash = "#zh"
-        }else{
-            window.location.hash = "#en"
-        }
-    }
-
-    // init
-    _render();
-</script>
-
-
-<!-- Gitalk 评论 start  -->
-
-<!-- Gitalk link  -->
-<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
-
-<div id="gitalk-container"></div>
-    <script type="text/javascript">
-    var gitalk = new Gitalk({
-    clientID: 'ed8e36c0b4cc3a8f441a',
-    clientSecret: '40a0dfa25e27ce7a5d28e99fc69b9da9d44ecef9',
-    repo: 'gg-lige.github.io',
-    owner: 'gg-lige',
-    admin: ['gg-lige'],
-    distractionFreeMode: true,
-    id: 'about',
-    });
-    gitalk.render('gitalk-container');
-</script>
-
-<!-- Gitalk end -->
-
- <!-- disqus 评论框 start  -->
-
-
-
-    		</div>
     <!-- Sidebar Container -->
             <div class="
-                col-lg-3 col-lg-offset-0
-                col-md-3 col-md-offset-0
-                col-sm-12
-                col-xs-12
-                sidebar-container
-            ">
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
                 <!-- Featured Tags -->
                 
                 <section>
                     <hr class="hidden-sm hidden-xs">
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                                <a href="/tags/#网络基础" title="网络基础" rel="2">
+                				<a href="/tags/#网络基础" title="网络基础" rel="2">
                                     网络基础
                                 </a>
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                                <a href="/tags/#Git" title="Git" rel="3">
+                				<a href="/tags/#Git" title="Git" rel="3">
                                     Git
                                 </a>
                             
-                        
+        				
                             
-                                <a href="/tags/#Github" title="Github" rel="2">
+                				<a href="/tags/#Github" title="Github" rel="2">
                                     Github
                                 </a>
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                                <a href="/tags/#GitLab" title="GitLab" rel="2">
+                				<a href="/tags/#GitLab" title="GitLab" rel="2">
                                     GitLab
                                 </a>
                             
-                        
+        				
                             
-                                <a href="/tags/#GitLab - CI" title="GitLab - CI" rel="2">
+                				<a href="/tags/#GitLab - CI" title="GitLab - CI" rel="2">
                                     GitLab - CI
                                 </a>
                             
-                        
+        				
                             
-                                <a href="/tags/#GitLab - Runner" title="GitLab - Runner" rel="2">
+                				<a href="/tags/#GitLab - Runner" title="GitLab - Runner" rel="2">
                                     GitLab - Runner
                                 </a>
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
+        				
                             
-                        
-                    </div>
+        				
+        			</div>
                 </section>
                 
 
-                <!-- Short About -->
-                <section class="visible-md visible-lg">
-                    <hr><h5><a href="/about/">ABOUT ME</a></h5>
-                    <div class="short-about">
-                        
-                            <a href="/about">
-                                <img src="/img/about-GG.jpg"/>
-                            </a>
-                        
-                        
-                            <p>Goals determine what you going to be!</p>
-                        
-                        <!-- SNS Link -->
-                        <ul class="list-inline">
-                            
-                            <!-- add jianshu add target = "_blank" to <a> by BY -->
-                            
-                            
-                            
-                            <li>
-                                <a target="_blank" href="https://www.zhihu.com/people/鸽鸽">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa  fa-stack-1x fa-inverse">知</i>
-                                    </span>
-                                </a>
-                            </li>
-                            
-                            
-                            
-                            
-                            <li>
-                                <a target="_blank" href="https://github.com/gg-lige">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            
-                            
-                        </ul>
-                        
-                            <p>✉️ gg_lige@163.com</p>
-                        
-                    </div>
-                </section>
                 <!-- Friends Blog -->
                 
                 <hr>
@@ -473,10 +444,49 @@
                     
                 </ul>
                 
-    		</div>
-        
-	</div>
-</div>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
 
 
     <!-- Footer -->
@@ -620,6 +630,50 @@
 
 
 <!-- Side Catalog -->
+
+<script type="text/javascript">
+    function generateCatalog (selector) {
+        var P = $('div.post-container'),a,n,t,l,i,c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#"+$(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="'+i+'" rel="nofollow">'+t+'</a>');
+            l = $('<li class="'+n+'_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;    
+    }
+
+    generateCatalog(".catalog-body");
+
+    // toggle side catalog
+    $(".catalog-toggle").click((function(e){
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    /*
+     * Doc: https://github.com/davist11/jQuery-One-Page-Nav
+     * Fork by Hux to support padding
+     */
+    async("/js/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
 
 
 

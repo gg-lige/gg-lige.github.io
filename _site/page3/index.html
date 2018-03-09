@@ -183,10 +183,188 @@
             ">
     			
 <div class="post-preview">
+    <a href="/2018/02/25/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+        <h2 class="post-title">
+            网络基础
+        </h2>
+        
+        <h3 class="post-subtitle">
+            知识点总结
+        </h3>
+        
+        <div class="post-content-preview">
+            网络基础
+
+  ==逻辑独立性==是外模式不变，模式改变时，如增加新的关系，新的属性，改变属性的数据类型，由数据库管理员对各个外模式/模式的映像做相应改变，可以使得外模式不变，因为应用程序依据外模式编写的，所以外模式不变，应用程序也不变，即保证了逻辑独立。
+==物理独立性==是模式不变，内模式改变，如数据库存储结构发生改变，选用另一种数据结构，由数据库管理员对各个模式/内模式的映像做相应改变...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by GG on February 25, 2018
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2018/02/25/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+        <h2 class="post-title">
+            操作系统
+        </h2>
+        
+        <h3 class="post-subtitle">
+            知识点总结
+        </h3>
+        
+        <div class="post-content-preview">
+            操作系统
+
+  设备分配主要采用 ==先来先服务== 和 ==优先级高者优先== 两种算法。
+  一个USB系统只能有一个USB主控制器，用8位地址表示下面的USB设备， 一共128个地址
+但是USB主控制器下面必须带一个Root Hub, hub也算一个设备，换句话说， 还剩下 ==127==个地址给用户。
+  文件系统采用二级目录结构，这样可以==解决不同用户之间的文件名的冲突问题.==...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by GG on February 25, 2018
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2018/02/25/%E6%8E%92%E5%BA%8F/">
+        <h2 class="post-title">
+            排序
+        </h2>
+        
+        <h3 class="post-subtitle">
+            知识点总结
+        </h3>
+        
+        <div class="post-content-preview">
+            排序
+
+  
+        
+  
+  外部排序指的是==大文件的排序==，即待排序的记录存储在外存储器上，==待排序的文件无法一次装入内存，需要在内存和外部存储器之间进行多次数据交换，以达到排序整个文件==的目的。外部排序最常用的算法是多路归并排序，即将原文件分解成多个能够一次性装入内存的部分，分别把每一部分调入内存完成排序。然后，对已经排序的子文件进行多路归并排序。
+  ==堆归选基=...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by GG on February 25, 2018
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2018/02/25/%E5%B9%B6%E5%8F%91/">
+        <h2 class="post-title">
+            并发
+        </h2>
+        
+        <h3 class="post-subtitle">
+            知识点总结
+        </h3>
+        
+        <div class="post-content-preview">
+            并发
+
+  共享内==存并未提供同步==机制，当某一个进程对共享内存提供写操作时，并未自动的阻止另一个进程对它进行读取；++共享内存++：就是允许多个进程访问同一内存空间，进程间传递和共享数据非常有效。++信号量++：为了防止多个进程访问共享资源而造成冲突，设置临界区域每次只让一个进程访问，信号量提供了这样一种机制，用来控制对临界区域的访问。
+  （1）==轮询调度==的原理是每一次把来自用...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by GG on February 25, 2018
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2018/02/25/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+        <h2 class="post-title">
+            字符串
+        </h2>
+        
+        <h3 class="post-subtitle">
+            知识点总结
+        </h3>
+        
+        <div class="post-content-preview">
+            字符串
+
+  子串数目：子串： ==n（n+1）/2 + 1==
+非空子串：==n（n+1）/2==
+非空真子串：==n（n+1）/2 - 1==
+  字符串最后以 ’ \0 ’ 结束。==strlen(str)函数==求字符串的长度，遇到’\0’是结束计算，不算 ‘\0’，且从1开始计数。 ==strcat(p1,p2)函数==要保证p1要有足够的空间来容纳p1和p2连接后的串长。==st...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by GG on February 25, 2018
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2018/02/25/%E5%A4%8D%E6%9D%82%E5%BA%A6/">
+        <h2 class="post-title">
+            复杂度
+        </h2>
+        
+        <h3 class="post-subtitle">
+            知识点总结
+        </h3>
+        
+        <div class="post-content-preview">
+            复杂度
+
+  红黑树的插入复杂度：==O(log2(n))==
+
+
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by GG on February 25, 2018
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2018/02/25/%E5%A0%86/">
+        <h2 class="post-title">
+            堆
+        </h2>
+        
+        <h3 class="post-subtitle">
+            知识点总结
+        </h3>
+        
+        <div class="post-content-preview">
+            堆
+
+  
+    堆是完全二叉树。
+  
+  堆排序中，当数组从0开始时，下标为k的结点的父结点下标==为(k-1)/2==；
+当数组从1开始时，下标为k的结点的父结点下标==为k/2==；
+  在用堆排序算法排序时,如果要进行==增序==排序,则需要采用“==大==根堆”，==减序==排列则要采用“==小==根堆”。
+  优先队列有两种，一种是最大优先队列；一种是最小优先队列；每次取自队...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by GG on February 25, 2018
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
     <a href="/2018/02/25/%E5%9B%BE/">
         <h2 class="post-title">
             图
         </h2>
+        
+        <h3 class="post-subtitle">
+            知识点总结
+        </h3>
         
         <div class="post-content-preview">
             图
@@ -200,7 +378,7 @@
         </div>
     </a>
     <p class="post-meta">
-        Posted by GG Blog on February 25, 2018
+        Posted by GG on February 25, 2018
     </p>
 </div>
 <hr>
@@ -210,6 +388,10 @@
         <h2 class="post-title">
             哈希
         </h2>
+        
+        <h3 class="post-subtitle">
+            知识点总结
+        </h3>
         
         <div class="post-content-preview">
             哈希
@@ -223,7 +405,7 @@ a.开放地址法【将所有结点均放在散列表[0….m-1]中】，包括�
         </div>
     </a>
     <p class="post-meta">
-        Posted by GG Blog on February 25, 2018
+        Posted by GG on February 25, 2018
     </p>
 </div>
 <hr>
@@ -234,6 +416,10 @@ a.开放地址法【将所有结点均放在散列表[0….m-1]中】，包括�
             加密与安全
         </h2>
         
+        <h3 class="post-subtitle">
+            知识点总结
+        </h3>
+        
         <div class="post-content-preview">
             加密与安全
 
@@ -242,83 +428,7 @@ a.开放地址法【将所有结点均放在散列表[0….m-1]中】，包括�
         </div>
     </a>
     <p class="post-meta">
-        Posted by GG Blog on February 25, 2018
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2018/02/25/Linux/">
-        <h2 class="post-title">
-            Linux
-        </h2>
-        
-        <div class="post-content-preview">
-            Linux
-
-  （1）软连接可以跨文件系统，硬连接不可以
-（2）硬连接不管有多少个，都指向的是同一个I节点，会把结点连接数增加，只要结点的连接数不是0，文件就一直存在不管你删除的是源文件还是连接的文件。只要有一个存在文件就存在。 当你修改源文件或者连接文件任何一个的时候，其他的文件都会做同步的修改。软链接不直接使用i节点号作为文件指针, 而是使用文件路径名作为指针。所以删除连接文件对源文件...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by GG Blog on February 25, 2018
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2018/02/25/Java/">
-        <h2 class="post-title">
-            Java
-        </h2>
-        
-        <div class="post-content-preview">
-            Java
-
-  
-    普通的类方法是可以和类名同名的，和构造方法唯一的区分就是，构造方法没有返回值.
-  
-  大多数 JVM 将内存区域划分为 Method Area（Non-Heap）（方法区） ,Heap（堆） , Program Counter Register（程序计数器） ,   VM Stack（虚拟机栈，也有翻译成JAVA 方法栈的）,Native Method Stac...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by GG Blog on February 25, 2018
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2018/02/24/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
-        <h2 class="post-title">
-            快速搭建个人博客
-        </h2>
-        
-        <h3 class="post-subtitle">
-            手把手教你在半小时内搭建自己的个人博客(如果不踩坑的话🙈🙊🙉)
-        </h3>
-        
-        <div class="post-content-preview">
-            
-  正所谓前人栽树，后人乘凉。
-
-  感谢Huxpro提供的博客模板和BY Blog提供的博客搭建方法。
-
-  我的的博客
-
-
-前言
-从 Jekyll 到 GitHub Pages 按照BY的搭建过程进行，终于把我的个人博客GG Blog搭建出来了。
-以下为BY博客内容。
-
-快速开始
-
-从注册一个Github账号开始
-
-我采用的搭建博客的方式是使用 GitHub Pages + jekyl...
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by GG on February 24, 2018
+        Posted by GG on February 25, 2018
     </p>
 </div>
 <hr>
@@ -332,6 +442,10 @@ a.开放地址法【将所有结点均放在散列表[0….m-1]中】，包括�
         <a href="/page2">&larr; Newer Posts</a>
     </li>
     
+    
+    <li class="next">
+        <a href="/page4">Older Posts &rarr;</a>
+    </li>
     
 </ul>
 
@@ -351,6 +465,98 @@ a.开放地址法【将所有结点均放在散列表[0….m-1]中】，包括�
                     <hr class="hidden-sm hidden-xs">
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                                <a href="/tags/#网络基础" title="网络基础" rel="2">
+                                    网络基础
+                                </a>
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                                <a href="/tags/#Git" title="Git" rel="3">
+                                    Git
+                                </a>
+                            
+                        
+                            
+                                <a href="/tags/#Github" title="Github" rel="2">
+                                    Github
+                                </a>
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                                <a href="/tags/#GitLab" title="GitLab" rel="2">
+                                    GitLab
+                                </a>
+                            
+                        
+                            
+                                <a href="/tags/#GitLab - CI" title="GitLab - CI" rel="2">
+                                    GitLab - CI
+                                </a>
+                            
+                        
+                            
+                                <a href="/tags/#GitLab - Runner" title="GitLab - Runner" rel="2">
+                                    GitLab - Runner
+                                </a>
+                            
+                        
+                            
+                        
+                            
                         
                             
                         

@@ -10,7 +10,7 @@
     <meta name="keywords"  content="GG, GG Blog, 鸽鸽的博客, gege, 鸽鸽, Xi'an Jiaotong University, Computer Science and Technology, Tax, 天地网实验室">
     <meta name="theme-color" content="#000000">
     
-    <title>About - 鸽鸽的博客 | GG Blog</title>
+    <title>鸽鸽的博客 | GG Blog</title>
 
     <!-- Web App Manifest -->
     <link rel="manifest" href="/pwa/manifest.json">
@@ -22,7 +22,7 @@
     <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="http://localhost:4000/about/">
+    <link rel="canonical" href="http://localhost:4000/page4/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -153,14 +153,14 @@
 
 
     <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/about-bg.jpg')">
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
                 <div class="site-heading">
-                    <h1>About</h1>
+                    <h1>GG Blog</h1>
                     <!--<hr class="small">-->
-                    <span class="subheading">Hey, this is GG.</span>
+                    <span class="subheading">All things are difficult before they are easy.</span>
                 </div>
             </div>
         </div>
@@ -181,123 +181,102 @@
                 col-xs-12
                 postlist-container
             ">
-    			<!-- Language Selector -->
-<!-- <select class="sel-lang" onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
-    <option value="0" selected> 中文 Chinese </option>
-    <option value="1"> 英文 English </option>
-</select> -->
+    			
+<div class="post-preview">
+    <a href="/2018/02/25/Linux/">
+        <h2 class="post-title">
+            Linux
+        </h2>
+        
+        <h3 class="post-subtitle">
+            知识点总结
+        </h3>
+        
+        <div class="post-content-preview">
+            Linux
 
-<!-- Chinese Version -->
-<div class="zh post-container">
-
-    <!--copied from markdown -->
-    <blockquote><p>不登高山,不知天之高也<br>
-    不临深溪,不知地之厚也</p></blockquote>
-
-    <p>Hey，我是<strong>鸽鸽(GG)</strong>，一只程序猿，现就读于西安交通大学。</p>
-
-    <p>学习之余，我还是一个健身爱好者，喜欢流汗的感觉，同时也非常喜欢唱歌。</p>
-
-    <p>这是我的利用 <a href="https://pages.github.com/">GitHub Pages</a> 与 <a href="http://jekyll.com.cn/">Jekyll</a> 搭建的 个人博客。我的GitHub主页<a href="https://github.com/gg-lige">👉GitHub·GG</a> 。如果有什么问题，欢迎提出探讨~</p>
-
-    <p></p>
-    
-    <h5>Talks</h5>
-
-    <ul>
-        <li><a href="https://github.com">GitHub</a></li>
-        <li><a href="http://jekyll.com.cn/">jekyll</a></li>
-        <li><a href="http://huangxuan.me/">Hux</a></li> 
-        <li><a href="https://analytics.google.com/analytics">Google Analytics</a></li>
-    </ul>
+  （1）软连接可以跨文件系统，硬连接不可以
+（2）硬连接不管有多少个，都指向的是同一个I节点，会把结点连接数增加，只要结点的连接数不是0，文件就一直存在不管你删除的是源文件还是连接的文件。只要有一个存在文件就存在。 当你修改源文件或者连接文件任何一个的时候，其他的文件都会做同步的修改。软链接不直接使用i节点号作为文件指针, 而是使用文件路径名作为指针。所以删除连接文件对源文件...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by GG on February 25, 2018
+    </p>
 </div>
+<hr>
 
-<!-- English Version -->
-<!-- <div class="en post-container">
-    <blockquote><p>Yet another iOS Developer. <br>
-    Yet another Life-long Student.</p></blockquote>
+<div class="post-preview">
+    <a href="/2018/02/25/Java/">
+        <h2 class="post-title">
+            Java
+        </h2>
+        
+        <h3 class="post-subtitle">
+            知识点总结
+        </h3>
+        
+        <div class="post-content-preview">
+            Java
 
-    <p>Hi, I am <strong>Baiying Qiu</strong>，you can call me <strong>BY</strong>. I am an iOS software engineer and currently working in Xiamen</p>
+  
+    普通的类方法是可以和类名同名的，和构造方法唯一的区分就是，构造方法没有返回值.
+  
+  大多数 JVM 将内存区域划分为 Method Area（Non-Heap）（方法区） ,Heap（堆） , Program Counter Register（程序计数器） ,   VM Stack（虚拟机栈，也有翻译成JAVA 方法栈的）,Native Method Stac...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by GG on February 25, 2018
+    </p>
+</div>
+<hr>
 
-    <p>This is my personal blog, through making Github Pages and Jekyll.My GitHub  👉 <a href="http://github.com/qiubaiying">Github·BY</a>.</p>
+<div class="post-preview">
+    <a href="/2018/02/24/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+        <h2 class="post-title">
+            快速搭建个人博客
+        </h2>
+        
+        <h3 class="post-subtitle">
+            手把手教你在半小时内搭建自己的个人博客(如果不踩坑的话🙈🙊🙉)
+        </h3>
+        
+        <div class="post-content-preview">
+            
+  正所谓前人栽树，后人乘凉。
+
+  感谢Huxpro提供的博客模板和BY Blog提供的博客搭建方法。
+
+  我的的博客
+
+
+前言
+从 Jekyll 到 GitHub Pages 按照BY的搭建过程进行，终于把我的个人博客GG Blog搭建出来了。
+以下为BY博客内容。
+
+快速开始
+
+从注册一个Github账号开始
+
+我采用的搭建博客的方式是使用 GitHub Pages + jekyl...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by GG on February 24, 2018
+    </p>
+</div>
+<hr>
+
+
+<!-- Pager -->
+
+<ul class="pager">
     
-    <p>I am a sports enthusiast, I like fitness, running and boxing.</p>
-
-    <h5>Talks</h5>
-
-    <ul>
-    <li><a href="https://github.com">GitHub</a></li>
-    <li><a href="http://jekyll.com.cn/">jekyll</a></li>
-    <li><a href="https://pages.github.com/">GitHub Pages</a></li>
-    <li><a href="https://qiubaiying.github.io">BY</a></li>
-    </ul>
-</div> -->
-
-<!-- Handle Language Change -->
-<script type="text/javascript">
-    // get nodes
-    var $zh = document.querySelector(".zh");
-    var $en = document.querySelector(".en");
-    var $select = document.querySelector("select");
-
-    // bind hashchange event
-    window.addEventListener('hashchange', _render);
-
-    // handle render
-    function _render(){
-        var _hash = window.location.hash;
-        // en
-        if(_hash == "#en"){
-            $select.selectedIndex = 1;
-            $en.style.display = "block";
-            $zh.style.display = "none";
-        // zh by default
-        }else{
-            // not trigger onChange, otherwise cause a loop call.
-            $select.selectedIndex = 0;
-            $zh.style.display = "block";
-            $en.style.display = "none";
-        }
-    }
-
-    // handle select change
-    function onLanChange(index){
-        if(index == 0){
-            window.location.hash = "#zh"
-        }else{
-            window.location.hash = "#en"
-        }
-    }
-
-    // init
-    _render();
-</script>
-
-
-<!-- Gitalk 评论 start  -->
-
-<!-- Gitalk link  -->
-<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
-
-<div id="gitalk-container"></div>
-    <script type="text/javascript">
-    var gitalk = new Gitalk({
-    clientID: 'ed8e36c0b4cc3a8f441a',
-    clientSecret: '40a0dfa25e27ce7a5d28e99fc69b9da9d44ecef9',
-    repo: 'gg-lige.github.io',
-    owner: 'gg-lige',
-    admin: ['gg-lige'],
-    distractionFreeMode: true,
-    id: 'about',
-    });
-    gitalk.render('gitalk-container');
-</script>
-
-<!-- Gitalk end -->
-
- <!-- disqus 评论框 start  -->
-
+    <li class="previous">
+        <a href="/page3">&larr; Newer Posts</a>
+    </li>
+    
+    
+</ul>
 
 
     		</div>
