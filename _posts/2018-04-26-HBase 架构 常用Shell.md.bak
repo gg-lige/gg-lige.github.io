@@ -20,7 +20,7 @@ tags:
 > 
 
 #   架构图
-![image](/img/post-2018-04-26.jpg)
+![](E:/git/gg-lige.github.io/img/post-2018-04-26.jpg)
 
 HBase有三个主要组成部分：客户端库，主服务器和区域服务器。区域服务器可以按要求添加或删除。
 
