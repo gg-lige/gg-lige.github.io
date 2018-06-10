@@ -251,7 +251,7 @@ mvn clean package
 ​	Windows 下启动命令为： 
 
 ```java
-
+{ZEPPELIN_HOME}\bin\zeppelin.cmd
 ```
 
 ​	Linux 下启动命令为：
