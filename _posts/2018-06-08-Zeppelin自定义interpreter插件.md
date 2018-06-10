@@ -268,7 +268,7 @@ mvn clean package
 
 ![1528548172021](/img/post-2018-06-09-1.PNG)
 
-​	添加 自定义的 Interpreter—>Create—>此时在Interpreter group 选项中会出现我们自定义的 NewInterpreter—>Save。
+​	添加 自定义的 Interpreter—>Create—>此时在Interpreter group 选项中会出现我们自定义的 NewInterpreter—>配置相关的Properties—>Save。
 
 ![1528548500283](/img/post-2018-06-09-2.PNG)
 
