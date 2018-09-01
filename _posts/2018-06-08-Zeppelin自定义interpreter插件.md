@@ -62,13 +62,13 @@ tags:
 
 ​	**整体架构：**官网Zeppelin架构图：
 
-![](../img/post1-10.png)
+![](/img/post1-10.png)
 
 ​	和其他类似的系统（HUE）一样，Zeppelin具有客户端/服务器架构，客户端Client一般就是指浏览器。服务器Server接收客户端的请求后，会起一个ZeppelinServer主进程。接着根据具体请求通过两种连接方式来连接解析器，一种是通过在ZeppelinServer主进程中加载Classloader连接解析器，另一种是将请求通过Thrift协议发送给远程解析器组RemoteInterpreter进行连接【注意：Zeppelin使用Thrift定义了其主进程ZeppelinServer与需要采用独立JVM进程运行的各解释器之间的通信协议 】，解析器组物理表现为JVM进程，负责实际处理客户端的请求并与服务器进行通信。	
 
 ​	**Zeppelin 总体模型**
 
-​                      ![](../img/post1-9.PNG)     
+​                      ![](/img/post1-9.PNG)     
 
 ​	总体来说，Zeppelin可以分为Web，Notebook以及Interpreter三个大部分。
 
@@ -82,7 +82,7 @@ tags:
 
 - Notebook Server：用于建立并维护前端网页与后端服务器之间的Websocket连接；它其实是一个job listener，接收并处理前端网页发来的Note执行请求，在后端生成并执行相应的job，并将job执行的状态信息广播到所有的前端页面。
 
-- Notebook，Note，Paragraph，Job：![](../img/post1-1.png)
+- Notebook，Note，Paragraph，Job：![](/img/post1-1.png)
   - Notebook：是多个Note 的集合.认为整个运行实例是一个Notebook，其中可以用很多篇Note。
   - Note：单个’记事本’的内存对象，每一篇Note就是一个具体的页面，它是zeppelin管理的最小单位，无论是做权限控制、共享、还是持久化，都是以Note为粒度的，这些Note默认存储在`$ZEPPELIN_HOME/notebook`文件夹中。
   - Paragraph：每一个Note 中包含多个Paragraph，每一个Paragraph就是一个代码段落，每个Paragraph 由code段和result 段构成。Paragraph是一个可执行单元，它等同于一个Job。
@@ -158,13 +158,13 @@ tags:
 
 ​	Zeppelin中最核心的概念是`     Interpreter` 解析器，解析器是一个插件式的体系结构，允许任何语言或后端数据处理程序以插件的形式添加到Zeppelin中。目前Apache Zeppelin已经支持许多解释器,我们可以在{ZEPPELIN_HOME}/interpreter/下找到这些解析器的文件夹。如图： 
 
-​                                                              ![](../img/post1-7.PNG)
+​                                                              ![](/img/post1-7.PNG)
 
 ​	interpreter的每个文件夹中存放的是编译好的jar包,以及该interpreter的相关依赖。	
 
 ​	以下是`Interpreter`的架构图：
 
-![](../img/post1-2.png)
+![](/img/post1-2.png)
 
 ​	
 
@@ -176,15 +176,15 @@ tags:
 
 ​	在`shared`模式下:一种解释器只有一个Interpreter进程，并且该进程中只有一个InterpreterGroup，所有的Interpreter实例都从属于该InterpreterGroup，当然，也肯定在同一个进程内部。多个note之间，可以很容易的共享变量。
 
-​                                                                  ![](../img/post1-12.png)
+​                                                                  ![](/img/post1-12.png)
 
 ​	在`scoped `模式下: 一种repl解释器只有一个Interpreter进程，但是与Shared模式不同，会创建多个InterpreterGroup，每个note关联一个InterpreterGroup。这样每个note相当于有了自己的session，session与session相互隔离，但是仍然由于这些InterpreterGroup仍然在同一个进程中，它们之间仍然可以共享变量。 
 
-​                        ![](../img/post1-13.png)
+​                        ![](/img/post1-13.png)
 
 ​	在`Isolated`模式下: 独占式，为每个note创建一个独立的intepreter进程，该进程中创建一个InterpreterGroup实例，为该note的服务的Interpreter实例从属于该InterpreterGroup。 
 
-​                             ![](../img/post1-14.png)
+​                             ![](/img/post1-14.png)
 
 **4. Interpreter的形式：**Zeppelin 可以接入不同的处理引擎供用户使用，当我们每接入一个处理引擎则需要为其配置一个 interpreter,注意：zeppelin 的 interpreter 不仅包含数据处理的引擎（`spark/hive/impala/flink/kylin/file/hbase`），也包括编程语言和语法格式(`python/markdown/shell`)。
 
@@ -462,11 +462,11 @@ Step4: Maven打包
 
 ​	用户anonymous—>Interpreter
 
-![1528548172021](../img/post1-3.png) 
+![1528548172021](/img/post1-3.png) 
 
 ​	添加 自定义的 Interpreter—>Create—>此时在Interpreter group 选项中会出现我们自定义的 NewInterpreter—>填写相关properties—>Save。
 
-![1528548500283](../img/post1-4.PNG) 
+![1528548500283](/img/post1-4.PNG) 
 
 
 
@@ -488,10 +488,10 @@ Step4: Maven打包
 
 ​	新建一个Note,绑定 NewInterpreter 解析器。蓝色表示对当前Note 绑定此解析器，白色未绑定。
 
-![1528549992400](../img/post1-5.PNG) 
+![1528549992400](/img/post1-5.PNG) 
 
 ​	执行命令,即可看到返回结果
 
-![1528547950876](../img/post1-6.PNG) 
+![1528547950876](/img/post1-6.PNG) 
 
 **Attention**:Zeppelin 打印解释器响应的方式有：`Text`、`Html`、`Table`。默认情况下，Apache Zeppelin使用`Text`显示系统打印解释器响应作为纯文本。 具体配置见 https://zeppelin.apache.org/docs/0.7.3/displaysystem/basicdisplaysystem.html。同时Angular Js 的前端、后端嵌入，具体配置见 https://zeppelin.apache.org/docs/0.7.3/displaysystem/back-end-angular.html。
