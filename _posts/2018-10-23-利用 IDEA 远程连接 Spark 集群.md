@@ -114,7 +114,7 @@ Caused by: java.util.concurrent.TimeoutException: Cannot receive any reply from 
 使用此方式：
 
 ```scala
-yum install -y yum-utils
+val b = spark.sparkContext.textFile("hdfs://d2e469333248:8020/user/lg/a.txt").map(_.split(" "))
 ```
 
 
